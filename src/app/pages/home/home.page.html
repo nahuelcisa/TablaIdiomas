@@ -1,0 +1,49 @@
+<ion-content noscroll>
+  <ion-grid style="height: 10%; display: flex; flex-flow: column;"> 
+    <ion-row style="flex-grow: 1;">
+      <ion-col style="border-bottom: 3px solid rgba(0, 0, 0, 0.534) ;">
+
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+  <ion-fab vertical="top" horizontal="start" slot="fixed">
+    <ion-fab-button>
+      <img src="../../../assets/flags/espana.png" alt="" *ngIf="espanol"> 
+      <img src="../../../assets/flags/portugal.png" alt="" *ngIf="portugues"> 
+      <img src="../../../assets/flags/reino-unido.png" alt="" *ngIf="english"> 
+    </ion-fab-button>
+    <ion-fab-list side="end">
+      <ion-fab-button *ngIf="!portugues"><img src="../../../assets/flags/portugal.png" alt="" (click)="elegirIdioma(1)"></ion-fab-button>
+      <ion-fab-button *ngIf="!english"><img src="../../../assets/flags/reino-unido.png" alt="" (click)="elegirIdioma(2)"></ion-fab-button>
+      <ion-fab-button *ngIf="!espanol"><img src="../../../assets/flags/espana.png" alt="" (click)="elegirIdioma(3)"></ion-fab-button>
+    </ion-fab-list>
+  </ion-fab>
+  <ion-fab vertical="top" horizontal="end" slot="fixed">
+    <ion-fab-button color="dark">
+      <img src="../../../assets/themes/animal.png" alt="" style="width: 50px; height: 50px;"  *ngIf="animales"> 
+      <img src="../../../assets/themes/numero.png" alt="" style="width: 50px; height: 50px;"  *ngIf="numeros"> 
+      <img src="../../../assets/themes/colores.png" alt="" style="width: 40px; height: 40px;"  *ngIf="colores">  
+    </ion-fab-button>
+    <ion-fab-list side="start" color="dark">
+      <ion-fab-button color="dark" *ngIf="!animales"><img src="../../../assets/themes/animal.png" alt="" style="width: 40px; height: 40px;"
+        (click)="elegirTema(3)"></ion-fab-button>
+      <ion-fab-button color="dark" *ngIf="!numeros"><img src="../../../assets/themes/numero.png" alt="" style="width: 40px; height: 40px;"
+        (click)="elegirTema(1)"> </ion-fab-button>
+      <ion-fab-button color="dark" *ngIf="!colores"><img src="../../../assets/themes/colores.png" alt="" style="width: 40px; height: 40px;"
+        (click)="elegirTema(2)"> </ion-fab-button>
+    </ion-fab-list>
+  </ion-fab>
+    <app-colores *ngIf="colores" (colores)="elegirAudio($event)"></app-colores>
+    <app-numeros *ngIf="numeros" (numeros)="elegirAudio($event)"></app-numeros>
+    <app-animales *ngIf="animales" (animales)="elegirAudio($event)"></app-animales>
+    <ion-spinner *ngIf="apretado" name="crescent"  color="light" style="display: block; margin:auto;width: 2px; height: 2px; position:inherit;"></ion-spinner>
+
+<ion-fab vertical="bottom" horizontal="end" slot="fixed">
+  <ion-fab-button color="dark">
+    <ion-icon name="settings-outline"></ion-icon>
+  </ion-fab-button>
+  <ion-fab-list side="top">
+    <ion-fab-button (click)="logOut()"><ion-icon name="return-down-back-outline"></ion-icon></ion-fab-button>
+  </ion-fab-list>
+</ion-fab>
+</ion-content>

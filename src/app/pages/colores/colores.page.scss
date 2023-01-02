@@ -1,0 +1,32 @@
+.gridVertical{
+    //"height: 89%; display: none; flex-flow: column;"
+    height: 89%;
+    display: flex;
+    flex-flow: column;
+}
+
+//style="height: 89%; display: flex; flex-flow: column;" 
+
+.gridHorizontal{
+    height: 89%;
+    display: flex;
+    flex-flow: column;
+}
+
+@media (min-height:600px){
+    .gridVertical{
+        display: flex; 
+    }
+    .gridHorizontal{
+        display: none;
+    }
+}
+
+@media(max-height: 600px){
+    .gridVertical{
+        display: none;        
+    }
+    .gridHorizontal{
+        display: flex;
+    }
+}

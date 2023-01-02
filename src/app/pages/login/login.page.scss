@@ -1,0 +1,68 @@
+.container {
+    margin-top: 3rem;
+}
+
+.iontittle{
+    font-family:'Gill Sans';
+    font-style: italic;
+    font-weight: bold;
+    font-size: 2.8rem;
+    background-color: rgba(254, 255, 248, 0);
+    text-align: center;
+    color: black;
+}
+
+.logo{
+    width: 13rem;
+    height: 13rem;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 1.5rem;
+    display: block;
+    background-color: rgba(240, 248, 255, 0.795);
+    border-radius: 25%;
+}
+
+ion-content {
+    //--background: linear-gradient(rgba(0, 0, 0, 0.123), rgba(0, 0, 0, 0.185)), url("../../../assets/images/bg-auth.png");
+    --background: rgb(0,212,255);
+    --background: radial-gradient(circle, rgba(0,212,255,1) 8%, rgba(179,230,74,1) 55%, rgba(179,230,74,1) 100%);
+}
+
+.botones {
+    //background-color: rgba(0, 89, 255, 0.61);
+    width: 80%;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 2.5rem;
+    border-style: dotted;
+    border-color: rgb(243, 94, 119);
+    font-size: large;
+}
+
+.items {
+    margin-top: 0.5rem;
+    --background: #00000000;
+    border-style: inset;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 30px;
+    border-color: rgb(94, 159, 243);
+
+}
+
+
+.ionButton{
+    background-color: rgba(255, 255, 255, 0);
+    margin-top: 0.5rem;
+    width: 100%;
+    margin-left: 0px;
+    border-radius: 30px;
+    font-family:'Gill Sans';
+    font-size: large;
+    border-style: dotted;
+    border-color: rgb(243, 94, 119);
+
+}

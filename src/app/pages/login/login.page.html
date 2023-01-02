@@ -1,0 +1,52 @@
+<ion-content no-scroll>
+
+  <h1 class="iontittle"><p>Tabla de Idiomas</p></h1>
+  
+  <div class="container"> 
+            <div class="containerButtons">
+              <ion-grid fixed>
+                <ion-row>
+                  <ion-col size="6">
+                    <ion-button class="ionButton" (click)="inicioRapido(1)" fill="clear" color="light"> 
+                      <ion-text color="light"> Usuario </ion-text> 
+                    </ion-button>
+                </ion-col>
+                <ion-col size="6">
+                  <ion-button class="ionButton" (click)="inicioRapido(3)" fill="clear" color="light"> 
+                    <ion-text color="light"> Invitado </ion-text> 
+                  </ion-button>
+                </ion-col>
+                </ion-row>
+                <ion-row>
+                  <ion-col size="12">
+                    <ion-button class="ionButton" (click)="inicioRapido(2)" fill="clear" color="light"> 
+                      <ion-text color="light" > Admin </ion-text>   
+                    </ion-button>
+                  </ion-col>
+                </ion-row>
+              </ion-grid>     
+          </div>
+          <form (ngSubmit)="iniciarSesion()" #f="ngForm">
+              <ion-item class="items">
+                  <ion-label position="floating">
+                      <ion-text color="light" style="font-family: 'Gill Sans'; font-size: large;">Correo</ion-text>
+                  </ion-label>
+                  <ion-input style="--color: white" [(ngModel)]="email" name="email" type="text" required color="light"></ion-input>
+              </ion-item>
+    
+              <ion-item class="items">
+                <ion-label position="floating">
+                  <ion-text color="light" style="font-family: 'Gill Sans';font-size: large;">Contraseña</ion-text>
+                  </ion-label>
+                  <ion-input style="--color: white" [(ngModel)]="clave" name="clave" type="password" required color="light"></ion-input>
+              </ion-item>
+              <ion-button class="botones" expand="block" fill="clear" type="submit">
+                  <ion-text color="light" style="font-family: 'Gill Sans'; "> Iniciar sesión </ion-text>
+              </ion-button>
+          </form>
+          <ion-spinner *ngIf="apretado" name="dots" style="display: block; margin:auto;width: 2cm; height: 2cm;"></ion-spinner>
+        <img src="../../../assets/images/iconopng.png" class="logo">
+
+          
+  </div>
+</ion-content>

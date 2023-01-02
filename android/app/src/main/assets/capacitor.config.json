@@ -1,0 +1,13 @@
+{
+	"appId": "io.ionic.starter5",
+	"appName": "Tabla Didactica",
+	"webDir": "www",
+	"bundledWebRuntime": false,
+	"backgroundColor": "#00000000",
+	"plugins": {
+		"SplashScreen": {
+			"launchAutoHide": false,
+			"showSpinner": false
+		}
+	}
+}
